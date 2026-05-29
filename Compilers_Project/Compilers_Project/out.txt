@@ -1,0 +1,24 @@
+VAR g_ret_int
+LABEL main
+VAR a
+ASSIGN 0 a
+VAR b
+ASSIGN 0 b
+PRINT "euclides mcd"
+PRINT "ingresa a"
+INPUT a
+PRINT "ingresa b"
+INPUT b
+LABEL while_start_0
+VAR t0
+NEQ b 0 t0
+IFFALSE t0 GOTO while_end_1
+VAR t
+ASSIGN b t
+VAR t1
+MOD a b t1
+ASSIGN t1 b
+ASSIGN t a
+GOTO while_start_0
+LABEL while_end_1
+PRINT a
